@@ -610,17 +610,29 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/navigate_destination/dorms
 	location = "Dormitories"
 
+/obj/effect/landmark/navigate_destination/garden
+	location = "Garden"
+
+/obj/effect/landmark/navigate_destination/lockers
+	location = "Locker Room"
+
 /obj/effect/landmark/navigate_destination/court
 	location = "Courtroom"
 
 /obj/effect/landmark/navigate_destination/tools
 	location = "Tool Storage"
 
+/obj/effect/landmark/navigate_destination/toolsaux
+	location = "Axuiliary Tool Storage"
+
 /obj/effect/landmark/navigate_destination/library
 	location = "Library"
 
 /obj/effect/landmark/navigate_destination/chapel
 	location = "Chapel"
+
+/obj/effect/landmark/navigate_destination/chapel_office
+	location = "Chapel Office"
 
 /obj/effect/landmark/navigate_destination/minisat_access_chapel_library
 	location = "Chapel and Library MiniSat Access"
