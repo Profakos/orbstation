@@ -2028,7 +2028,7 @@
 	},
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/dorms,
 /turf/open/floor/iron/dark,
 /area/station/commons/locker)
 "aBN" = (
@@ -9209,7 +9209,7 @@
 	name = "Arrival Shuttle Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/dockarrival,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/entry)
 "cPp" = (
@@ -12553,7 +12553,7 @@
 /obj/machinery/door/airlock/command/glass{
 	name = "Bridge Access"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/bridge,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "bridge"
 	},
@@ -13164,7 +13164,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/techstorage,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tech_storage,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
@@ -20794,7 +20794,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/eva,
 /obj/effect/mapping_helpers/airlock/access/all/command/eva,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/storage/eva)
@@ -22023,7 +22023,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/dockesc,
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit/departure_lounge)
 "gqz" = (
@@ -22686,7 +22686,7 @@
 	id_tag = "medbay_front_door";
 	name = "Medbay"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/med,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -24103,7 +24103,7 @@
 	name = "Engineering"
 	},
 /obj/structure/cable,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/engineering,
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 8
 	},
@@ -27064,7 +27064,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/structure/cable,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/vault,
 /obj/effect/mapping_helpers/airlock/access/all/supply/vault,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
@@ -35094,7 +35094,7 @@
 /obj/machinery/door/airlock/grunge{
 	name = "Custodial Closet"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/janitor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -43553,7 +43553,7 @@
 /obj/machinery/door/airlock/command{
 	name = "Head of Personnel's Office"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/hop,
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
 	},
@@ -64410,7 +64410,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/det,
 /obj/effect/mapping_helpers/airlock/access/all/security/detective,
 /turf/open/floor/iron/dark,
 /area/station/security/detectives_office)
@@ -65803,7 +65803,7 @@
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/atmos,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "atmos-entrance"
@@ -71837,7 +71837,7 @@
 	name = "Tool Storage"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/tools,
 /turf/open/floor/iron/dark,
 /area/station/commons/storage/primary)
 "uuC" = (
@@ -75889,7 +75889,7 @@
 /obj/machinery/door/airlock/command/glass{
 	name = "Teleporter Access"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/teleporter,
 /obj/effect/mapping_helpers/airlock/access/all/command/teleporter,
 /turf/open/floor/iron/dark,
 /area/station/command/teleporter)
@@ -76915,7 +76915,7 @@
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 4
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/research,
 /obj/effect/mapping_helpers/airlock/access/all/science/general,
 /turf/open/floor/iron/dark,
 /area/station/science/research)
@@ -77678,7 +77678,7 @@
 	id_tag = "outerbrig";
 	name = "Brig"
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/sec,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
 	cycle_id = "brig-entrance-right"
 	},
@@ -80828,18 +80828,6 @@
 "wRM" = (
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
-"wRO" = (
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/blue,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/obj/effect/landmark/navigate_destination,
-/turf/open/floor/iron,
-/area/station/engineering/atmos)
 "wRQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/shard,
@@ -82068,7 +82056,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/landmark/navigate_destination,
+/obj/effect/landmark/navigate_destination/cargo,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark,
 /area/station/cargo/office)
@@ -117798,7 +117786,7 @@ qFb
 jzw
 mHa
 sMf
-wRO
+uCS
 uCS
 twu
 iTB
