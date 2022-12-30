@@ -7109,9 +7109,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Escape Airlock"
 	},
-/obj/effect/landmark/navigate_destination{
-	location = "Escape"
-	},
+/obj/effect/landmark/navigate_destination/dockesc,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit/departure_lounge)
 "cBv" = (
@@ -56642,10 +56640,6 @@
 /obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/iron,
 /area/station/security/office)
-"uqR" = (
-/obj/effect/landmark/navigate_destination/dockarrival,
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "uqS" = (
 /turf/open/floor/glass/reinforced,
 /area/station/ai_monitored/turret_protected/aisat/hallway)
@@ -59764,9 +59758,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Port Docking Bay 1"
 	},
-/obj/effect/landmark/navigate_destination{
-	location = "Arrival Shuttle"
-	},
+/obj/effect/landmark/navigate_destination/dockarrival,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "vxk" = (
@@ -145699,7 +145691,7 @@ nHz
 oxg
 nEy
 jEu
-uqR
+jEu
 rpT
 qAW
 jEu
