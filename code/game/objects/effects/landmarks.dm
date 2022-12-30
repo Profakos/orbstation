@@ -675,6 +675,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/navigate_destination/dockaux
 	location = "Auxiliary Dock"
 
+/obj/effect/landmark/navigate_destination/dockcommonmining
+	location = "Common Mining Dock"
+
 //Maint
 /obj/effect/landmark/navigate_destination/incinerator
 	location = "Incinerator"
