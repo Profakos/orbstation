@@ -575,16 +575,51 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/navigate_destination/tcomms
 	location = "Telecommunications"
 
-//Departments
+//Security
+/obj/effect/landmark/navigate_destination/armory
+	location = "Armory"
+
 /obj/effect/landmark/navigate_destination/sec
 	location = "Security"
 
 /obj/effect/landmark/navigate_destination/det
 	location = "Detective's Office"
 
+/obj/effect/landmark/navigate_destination/hos
+	location = "Head of Security's Office"
+
+/obj/effect/landmark/navigate_destination/visitations
+	location = "Visitations"
+
+//Science
 /obj/effect/landmark/navigate_destination/research
 	location = "Research"
 
+/obj/effect/landmark/navigate_destination/genetics
+	location = "Genetics"
+
+/obj/effect/landmark/navigate_destination/circuits
+	location = "Circuits Lab"
+
+/obj/effect/landmark/navigate_destination/ordnance
+	location = "Ordnance Lab"
+
+/obj/effect/landmark/navigate_destination/xenobiology
+	location = "Xenobiology"
+
+/obj/effect/landmark/navigate_destination/robotics
+	location = "Robotics"
+
+/obj/effect/landmark/navigate_destination/server
+	location = "Server Room"
+
+/obj/effect/landmark/navigate_destination/experimentation
+	location = "Experimentation Lab"
+
+/obj/effect/landmark/navigate_destination/rd
+	location = "Research Director's Office"
+
+//Engineering
 /obj/effect/landmark/navigate_destination/engineering
 	location = "Engineering"
 
@@ -594,12 +629,29 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/navigate_destination/atmos
 	location = "Atmospherics"
 
+//Medbay
+/obj/effect/landmark/navigate_destination/cmo
+	location = "Chief Medical Officer's Office"
+
+/obj/effect/landmark/navigate_destination/pharmacy
+	location = "Pharmacy"
+
 /obj/effect/landmark/navigate_destination/med
 	location = "Medical"
 
 /obj/effect/landmark/navigate_destination/chemfactory
 	location = "Chemistry Factory"
 
+/obj/effect/landmark/navigate_destination/morgue
+	location = "Morgue"
+
+/obj/effect/landmark/navigate_destination/psychology
+	location = "Psychology Office"
+
+/obj/effect/landmark/navigate_destination/virology
+	location = "Virology"
+
+//Cargo
 /obj/effect/landmark/navigate_destination/cargo
 	location = "Cargo"
 
@@ -612,6 +664,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/navigate_destination/garden
 	location = "Garden"
+
+/obj/effect/landmark/navigate_destination/holodeck
+	location = "Holodeck"
+
+/obj/effect/landmark/navigate_destination/theater
+	location = "Theater"
 
 /obj/effect/landmark/navigate_destination/lockers
 	location = "Locker Room"
@@ -637,6 +695,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 /obj/effect/landmark/navigate_destination/minisat_access_chapel_library
 	location = "Chapel and Library MiniSat Access"
 
+/obj/effect/landmark/navigate_destination/vacant_commissary
+	location = "Vacant Commissary"
+
 //Service
 /obj/effect/landmark/navigate_destination/kitchen
 	location = "Kitchen"
@@ -649,6 +710,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 
 /obj/effect/landmark/navigate_destination/lawyer
 	location = "Lawyer's Office"
+
+/obj/effect/landmark/navigate_destination/servicehall
+	location = "Service Hallway"
 
 //Shuttle docks
 /obj/effect/landmark/navigate_destination/dockarrival
