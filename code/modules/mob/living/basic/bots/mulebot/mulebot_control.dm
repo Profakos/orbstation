@@ -99,10 +99,6 @@
 		if("report")
 			mulebot_delivery_flags ^= MULEBOT_REPORT_DELIVERY_MODE
 
-/mob/living/basic/bot/mulebot/bot_reset(bypass_ai_reset)
-	..()
-	reached_target = FALSE
-
 /mob/living/basic/bot/mulebot/proc/start()
 	if(!(bot_mode_flags & BOT_MODE_ON))
 		return

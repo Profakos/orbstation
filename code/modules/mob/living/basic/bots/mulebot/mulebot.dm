@@ -41,11 +41,6 @@
 
 	var/atom/movable/load /// what we're transporting
 	var/mob/living/passenger /// who's riding us
-	var/turf/target /// this is turf to navigate to (location of beacon)
-
-	var/reached_target = TRUE ///true if already reached the target
-	///Number of times retried a blocked path
-	var/blockcount = 0
 
 	///flags of mulebot mode
 	var/mulebot_delivery_flags = MULEBOT_RETURN_MODE | MULEBOT_AUTO_PICKUP_MODE | MULEBOT_REPORT_DELIVERY_MODE

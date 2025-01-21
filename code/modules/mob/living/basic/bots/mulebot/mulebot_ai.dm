@@ -4,7 +4,7 @@
 			"blinks its light in appreciation towards",
 		)
 	)
-	ai_movement = /datum/ai_movement/jps/bot
+	ai_movement = /datum/ai_movement/jps
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/respond_to_summon,
 		/datum/ai_planning_subtree/salute_authority,
@@ -65,15 +65,19 @@
 	return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
 
 /datum/ai_behavior/travel_towards/delivery_beacon
-	new_movement_type = /datum/ai_movement/jps/bot/mule
-
-/datum/ai_movement/jps/bot/mule
-	maximum_length = AI_BOT_PATH_LENGTH
+	new_movement_type = /datum/ai_movement/jps
 
 /datum/ai_planning_subtree/attempt_delivery
 	var/delivery_behaviour = /datum/ai_behavior/delivery_behaviour
 
-/datum/ai_behavior/delivery_behaviour
+/datum/ai_planning_subtree/attempt_delivery/SelectBehaviors(datum/ai_controller/controller, seconds_per_tick)
+	if(!controller.blackboard_key_exists(BB_MULEBOT_TRAVEL_TARGET))
+		return
+
+	var/atom/target_atom = controller.blackboard[BB_MULEBOT_TRAVEL_TARGET]
+	if(target_atom.loc == controller.pawn.loc)
+		controller.queue_behavior(delivery_behaviour, BB_MULEBOT_TRAVEL_TARGET)
+
 
 /datum/ai_behavior/delivery_behaviour/perform(seconds_per_tick, datum/ai_controller/controller, target_key)
 	var/obj/machinery/navbeacon/beacon = controller.blackboard[target_key]
@@ -105,13 +109,14 @@
 						break
 			else // otherwise, look for crates only
 				atom_to_pick_up = locate(/obj/structure/closet/crate) in get_step(bot_pawn.loc, load_direction)
-			if(atom_to_pick_up?.Adjacent(src))
+			if(atom_to_pick_up?.Adjacent(bot_pawn))
 				bot_pawn.load(atom_to_pick_up)
 				if(bot_pawn.mulebot_delivery_flags & MULEBOT_REPORT_DELIVERY_MODE)
-					bot_pawn.speak("Now loading [bot_pawn.load] at [RUNECHAT_BOLD("[get_area_name(src)]")].", bot_pawn.radio_channel)
+					bot_pawn.speak("Now loading [bot_pawn.load] at [RUNECHAT_BOLD("[get_area_name(bot_pawn)]")].", bot_pawn.radio_channel)
 
 	if((bot_pawn.mulebot_delivery_flags & MULEBOT_RETURN_MODE) && controller.blackboard[BB_MULEBOT_HOME_BEACON] && controller.blackboard[BB_MULEBOT_HOME_BEACON] != beacon.location)
 		bot_pawn.update_bot_mode(new_mode = BOT_GO_HOME)
+		controller.clear_blackboard_key(BB_MULEBOT_TRAVEL_TARGET)
 	else
 		bot_pawn.bot_reset() // otherwise go idle
 
