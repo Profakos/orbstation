@@ -479,7 +479,7 @@ Diagnostic HUDs!
 		else
 			set_hud_image_state(DIAG_BOT_HUD, "")
 
-/mob/living/simple_animal/bot/mulebot/proc/diag_hud_set_mulebotcell()
+/mob/living/basic/bot/mulebot/proc/diag_hud_set_mulebotcell()
 	if(cell)
 		var/chargelvl = (cell.charge/cell.maxcharge)
 		set_hud_image_state(DIAG_BATT_HUD, "hudbatt[RoundDiagBar(chargelvl)]")

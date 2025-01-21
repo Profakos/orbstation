@@ -70,7 +70,7 @@
 	if(prob(0.666) && mapload)
 		new /mob/living/simple_animal/bot/mulebot/paranormal(loc)
 		return INITIALIZE_HINT_QDEL
-	set_wires(new /datum/wires/mulebot(src))
+	//set_wires(new /datum/wires/mulebot(src))
 
 	// Doing this hurts my soul, but simplebot access reworks are for another day.
 	var/datum/id_trim/job/cargo_trim = SSid_access.trim_singletons_by_path[/datum/id_trim/job/cargo_technician]
@@ -80,7 +80,7 @@
 	cell = new /obj/item/stock_parts/power_store/cell/upgraded(src, 2000)
 
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/mulebot)
-	diag_hud_set_mulebotcell()
+	//diag_hud_set_mulebotcell()
 
 	set_id(suffix || assign_random_name())
 	suffix = null
@@ -95,7 +95,7 @@
 	if(gone == cell)
 		turn_off()
 		cell = null
-		diag_hud_set_mulebotcell()
+		//diag_hud_set_mulebotcell()
 
 /mob/living/simple_animal/bot/mulebot/examine(mob/user)
 	. = ..()
@@ -125,7 +125,8 @@
 
 /// returns true if the bot is fully powered.
 /mob/living/simple_animal/bot/mulebot/proc/has_power()
-	return cell && cell.charge > 0 && (!wires.is_cut(WIRE_POWER1) && !wires.is_cut(WIRE_POWER2))
+	return
+//	return cell && cell.charge > 0 && (!wires.is_cut(WIRE_POWER1) && !wires.is_cut(WIRE_POWER2))
 
 /mob/living/simple_animal/bot/mulebot/attack_hand(mob/living/carbon/human/user, list/modifiers)
 	if(bot_cover_flags & BOT_COVER_MAINTS_OPEN && !HAS_AI_ACCESS(user))
@@ -175,7 +176,7 @@
 		span_notice("You pry [cell] out of [src]."),
 	)
 	cell = null
-	diag_hud_set_mulebotcell()
+	//diag_hud_set_mulebotcell()
 	return ITEM_INTERACT_SUCCESS
 
 /mob/living/simple_animal/bot/mulebot/attackby(obj/item/I, mob/living/user, params)
@@ -186,7 +187,7 @@
 		if(!user.transferItemToLoc(I, src))
 			return TRUE
 		cell = I
-		diag_hud_set_mulebotcell()
+		//diag_hud_set_mulebotcell()
 		user.visible_message(
 			span_notice("[user] inserts \a [cell] into [src]."),
 			span_notice("You insert [cell] into [src]."),
@@ -487,7 +488,7 @@
 			if(future_pancake.body_position == LYING_DOWN)
 				run_over(future_pancake)
 
-	diag_hud_set_mulebotcell()
+	//diag_hud_set_mulebotcell()
 
 /mob/living/simple_animal/bot/mulebot/handle_automated_action()
 	if(!(bot_mode_flags & BOT_MODE_ON))

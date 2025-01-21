@@ -141,6 +141,14 @@ DEFINE_BITFIELD(repairbot_flags, list(
 ///lines we say when we are emagged
 #define BB_FIREBOT_EMAGGED_LINES "emagged_lines"
 
+//mulebots
+///key that holds our delivery destination's name
+#define BB_MULEBOT_DESTINATION_BEACON "mulebot_destination"
+///key that holds our home port's name
+#define BB_MULEBOT_HOME_BEACON "mulebot_home_beacon"
+///key that holds our current delivery target atom
+#define BB_MULEBOT_TRAVEL_TARGET "mulebot_travel_target"
+
 //vibebots
 ///key that holds our partying ability
 #define BB_VIBEBOT_PARTY_ABILITY "party_ability"

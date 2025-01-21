@@ -46,18 +46,18 @@
 			"mule_check" = FALSE,
 		)
 		if(simple_bot.bot_type == MULE_BOT)
-			var/mob/living/simple_animal/bot/mulebot/simple_mulebot = simple_bot
+			var/mob/living/basic/bot/mulebot/basic_mulebot = simple_bot
 			mulelist += list(list(
-				"name" = simple_mulebot.name,
-				"id" = simple_mulebot.id,
-				"dest" = simple_mulebot.destination,
-				"power" = simple_mulebot.cell ? simple_mulebot.cell.percent() : 0,
-				"home" = simple_mulebot.home_destination,
-				"autoReturn" = simple_mulebot.mulebot_delivery_flags & MULEBOT_RETURN_MODE,
-				"autoPickup" = simple_mulebot.mulebot_delivery_flags & MULEBOT_AUTO_PICKUP_MODE,
-				"reportDelivery" = simple_mulebot.mulebot_delivery_flags & MULEBOT_REPORT_DELIVERY_MODE,
-				"mule_ref" = REF(simple_mulebot),
-				"load" = simple_mulebot.get_load_name(),
+				"name" = basic_mulebot.name,
+				"id" = basic_mulebot.id,
+				"dest" = basic_mulebot.ai_controller.blackboard[BB_MULEBOT_DESTINATION_BEACON],
+				"power" = basic_mulebot.cell ? basic_mulebot.cell.percent() : 0,
+				"home" = basic_mulebot.ai_controller.blackboard[BB_MULEBOT_HOME_BEACON],
+				"autoReturn" = basic_mulebot.mulebot_delivery_flags & MULEBOT_RETURN_MODE,
+				"autoPickup" = basic_mulebot.mulebot_delivery_flags & MULEBOT_AUTO_PICKUP_MODE,
+				"reportDelivery" = basic_mulebot.mulebot_delivery_flags & MULEBOT_REPORT_DELIVERY_MODE,
+				"mule_ref" = REF(basic_mulebot),
+				"load" = basic_mulebot.get_load_name(),
 			))
 			newbot["mule_check"] = TRUE
 		botlist += list(newbot)
