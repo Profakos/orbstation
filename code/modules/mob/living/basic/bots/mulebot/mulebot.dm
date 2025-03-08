@@ -55,7 +55,7 @@
 		return INITIALIZE_HINT_QDEL
 
 	set_wires(new /datum/wires/mulebot(src))
-	cell = new /obj/item/stock_parts/power_store/cell/upgraded(src, 2000)
+	cell = new /obj/item/stock_parts/power_store/cell/upgraded(src)
 
 	. = ..()
 
