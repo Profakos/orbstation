@@ -45,19 +45,25 @@
 	///flags of mulebot mode
 	var/mulebot_delivery_flags = MULEBOT_RETURN_MODE | MULEBOT_AUTO_PICKUP_MODE | MULEBOT_REPORT_DELIVERY_MODE
 
-	var/obj/item/stock_parts/power_store/cell /// Internal Powercell
-	var/cell_move_power_usage = 1///How much power we use when we move.
-	var/num_steps = 0 ///The amount of steps we should take until we rest for a time.
+	///Internal Powercell
+	var/obj/item/stock_parts/power_store/cell
+	///How much power we use when we move.
+	var/cell_move_power_usage = 0.0005 * STANDARD_CELL_CHARGE
+	///The amount of steps we should take until we rest for a time.
+	var/num_steps = 0
+
+	///The chance to be deleted and replaced by a different mule
+	var/replacement_chance = 100 //0.666
 
 /mob/living/basic/bot/mulebot/Initialize(mapload)
-	if(prob(0.666) && mapload)
+	. = ..()
+	//if(prob(0.666) && mapload)
+	if(prob(replacement_chance) && mapload)
 		new /mob/living/basic/bot/mulebot/paranormal(loc)
 		return INITIALIZE_HINT_QDEL
 
 	set_wires(new /datum/wires/mulebot(src))
 	cell = new /obj/item/stock_parts/power_store/cell/upgraded(src)
-
-	. = ..()
 
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/mulebot)
 	ADD_TRAIT(src, TRAIT_NOMOBSWAP, INNATE_TRAIT)

@@ -3,6 +3,8 @@
 	desc = "A rather ghastly looking... Multiple Utility Load Effector bot? It only seems to accept paranormal forces, and for this reason is fucking useless."
 	icon_state = "paranormalmulebot0"
 	base_icon_state = "paranormalmulebot"
+	///avoid the utterly miniscule chance of infinite looping
+	replacement_chance = 0
 
 /mob/living/basic/bot/mulebot/paranormal/update_overlays()
 	. = ..()
